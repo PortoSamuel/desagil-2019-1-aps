@@ -1,5 +1,7 @@
 package br.pro.hashi.ensino.desagil.aps.model;
 
+import org.junit.jupiter.api.Test;
+
 public class NandGate extends Gate {
     private final SignalEmitter[] emitters;
 
