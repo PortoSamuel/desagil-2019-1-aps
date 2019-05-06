@@ -1,5 +1,6 @@
 package br.pro.hashi.ensino.desagil.aps.model;
 
+@SuppressWarnings("ALL")
 public class Light implements SignalReceiver {
     private int r;
     private int g;
@@ -42,6 +43,7 @@ public class Light implements SignalReceiver {
         return 0;
     }
 
+    @SuppressWarnings("unused")
     public void setB(int b) {
         this.b = b;
     }

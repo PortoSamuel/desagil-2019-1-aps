@@ -9,6 +9,7 @@ import java.awt.*;
 // basicamente um JPanel de tamanho fixo. Fixar tamanho
 // geralmente não é considerada uma boa prática de design
 // de interface, mas fazemos isso aqui por simplicidade.
+@SuppressWarnings("SameParameterValue")
 public class FixedPanel extends JPanel {
 
     // O construtor recebe a largura e a altura do painel.
@@ -28,7 +29,7 @@ public class FixedPanel extends JPanel {
     // Fixar posição e tamanho também não é uma boa prática,
     // pois o normal é deixar o layout decidir. Novamente,
     // escolhemos fazer isso aqui para priorizar simplicidade.
-    protected Component add(Component comp, int x, int y, int width, int height) {
+    protected void add(Component comp, int x, int y, int width, int height) {
 
         // Usa a implementação original para adicionar.
         super.add(comp);
@@ -36,6 +37,5 @@ public class FixedPanel extends JPanel {
         // Redefine posição e tamanho da componente.
         comp.setBounds(x, y, width, height);
 
-        return comp;
     }
 }
